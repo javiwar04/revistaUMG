@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 // Button removed (export PDF feature removed)
 import IndexPill from '@/components/ui/index-pill'
+import Link from 'next/link'
+import { votos as votosData } from '@/components/principles/votosData'
 import useActiveSection from '@/hooks/useActiveSection'
 import EditorCard from '@/components/editors/EditorCard'
 import {
@@ -35,6 +37,7 @@ export default function RevistaUMG() {
     'critica',
     'perdon',
     'confiar-en-dios',
+    'competencias',
     'votos-exito',
   ])
 
@@ -104,6 +107,7 @@ export default function RevistaUMG() {
                       <IndexPill href="#perdon" active={activeSection === 'perdon'}>Perdón</IndexPill>
                       <IndexPill href="#confiar-en-dios" active={activeSection === 'confiar-en-dios'}>Fe</IndexPill>
                       <IndexPill href="#votos-exito" active={activeSection === 'votos-exito'}>7 votos</IndexPill>
+                      <IndexPill href="#competencias" active={activeSection === 'competencias'}>Competencias</IndexPill>
                     </div>
                   </div>
                 </nav>
@@ -111,24 +115,26 @@ export default function RevistaUMG() {
                 {/* Índice completo: enlaces detallados a cada principio y voto */}
                 <div className="max-w-5xl mx-auto mb-6">
                   <div className="bg-card p-6 md:p-8 rounded-lg shadow-sm">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center">Índice completo</h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-base md:text-lg text-muted-foreground">
-                      <li><a href="#editores" className="text-foreground hover:underline">Sobre nuestros editores</a></li>
-                      <li><a href="#comunicacion" className="text-foreground hover:underline">Principio de la comunicación</a></li>
-                      <li><a href="#empatia" className="text-foreground hover:underline">Principio de la empatía</a></li>
-                      <li><a href="#justicia" className="text-foreground hover:underline">Principio de la justicia</a></li>
-                      <li><a href="#critica" className="text-foreground hover:underline">Principio de la crítica</a></li>
-                      <li><a href="#perdon" className="text-foreground hover:underline">Principio del perdón</a></li>
-                      <li><a href="#confiar-en-dios" className="text-foreground hover:underline">Principio de la fe</a></li>
-                      <li className="font-medium col-span-full">Los 7 votos del éxito</li>
-                      <li className="pl-4"><a href="#integridad" className="text-foreground hover:underline">Integridad</a></li>
-                      <li className="pl-4"><a href="#perseverancia" className="text-foreground hover:underline">Perseverancia</a></li>
-                      <li className="pl-4"><a href="#humildad" className="text-foreground hover:underline">Humildad</a></li>
-                      <li className="pl-4"><a href="#responsabilidad" className="text-foreground hover:underline">Responsabilidad</a></li>
-                      <li className="pl-4"><a href="#respeto" className="text-foreground hover:underline">Respeto</a></li>
-                      <li className="pl-4"><a href="#colaboracion" className="text-foreground hover:underline">Colaboración</a></li>
-                      <li className="pl-4"><a href="#gratitud" className="text-foreground hover:underline">Gratitud</a></li>
-                    </ul>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">Índice completo</h3>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {[
+                        { href: '#editores', title: 'Sobre nuestros editores', desc: 'Quiénes hacen esta revista' },
+                        { href: '#comunicacion', title: 'Principio: Comunicación', desc: 'Cómo transmitimos ideas con claridad' },
+                        { href: '#empatia', title: 'Principio: Empatía', desc: 'Escucha y posicionamiento desde el otro' },
+                        { href: '#justicia', title: 'Principio: Justicia', desc: 'Equidad y reparación en la práctica' },
+                        { href: '#critica', title: 'Principio: Crítica', desc: 'Pensar con rigor y responsabilidad' },
+                        { href: '#perdon', title: 'Principio: Perdón', desc: 'Reconciliación y aprendizaje' },
+                        { href: '#confiar-en-dios', title: 'Principio: Fe', desc: 'Creencias que orientan la acción' },
+                        { href: '#votos-exito', title: 'Los 7 votos del éxito', desc: 'Un conjunto de actitudes y prácticas' },
+                        { href: '#competencias', title: 'Competencias UMG', desc: 'Nuestro proyecto en robótica 2025' },
+                      ].map((item) => (
+                        <a key={item.href} href={item.href} className="group block p-4 rounded-lg bg-background/50 hover:bg-white/5 transition-shadow shadow-sm hover:shadow-md">
+                          <h4 className="text-lg font-semibold mb-1 group-hover:text-primary">{item.title}</h4>
+                          <p className="text-sm text-muted-foreground">{item.desc}</p>
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
