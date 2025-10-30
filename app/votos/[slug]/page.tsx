@@ -6,6 +6,13 @@ type Props = {
   params: { slug: string }
 }
 
+// For static export (output: 'export') we must provide the list of params
+// to pre-render. This returns an array of `{ slug }` objects taken from the
+// votos data.
+export async function generateStaticParams() {
+  return votosData.map((v) => ({ slug: v.slug }))
+}
+
 export default function VotoPage({ params }: Props) {
   const voto = votosData.find((v) => v.slug === params.slug)
   if (!voto) return notFound()
