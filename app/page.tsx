@@ -56,7 +56,7 @@ export default function RevistaUMG() {
               <div className="absolute -right-40 -top-24 w-[420px] h-[420px] bg-white/8 rounded-full blur-3xl" />
               <div className="relative z-10 flex items-center justify-center px-6 md:px-12 py-12 md:py-20 h-auto md:h-[520px]">
                 <div className="text-white max-w-2xl mx-auto text-center">
-                  <Badge className="bg-white/10 text-white">Edición Especial</Badge>
+                  <Badge className="bg-white/10 text-white">Grupo No.1</Badge>
 
 
                   <h1 className="font-display text-4xl md:text-6xl font-extrabold leading-tight mt-6">Ética en Red</h1>
