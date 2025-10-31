@@ -24,6 +24,8 @@ import {
   Colaboracion,
   Gratitud,
   VotosExitoBook,
+  // VotosAplicacion will show actionable steps after the book
+  VotosAplicacion,
 } from '@/components/principles'
 // useRef removed (no longer needed)
 
@@ -154,10 +156,10 @@ export default function RevistaUMG() {
 
                   <EditorCard
                     name="Víctor Alejandro Ochoa Jacinto"
-                    imgSrc="/victor.jpeg"
+                    imgSrc="/Victor8a.png"
                     alt="Víctor Alejandro Ochoa Jacinto"
                     role="Editor de investigación"
-                    bio={"Editor de investigación, enfocado en análisis crítico y verificación de fuentes para contenidos responsables."}
+                    bio={"Nacido el 10 de mayo de 2003 en San Benito, Petén, Víctor Ochoa cursa la carrera de Ingeniería en Sistemas en la Universidad Mariano Gálvez de Guatemala. Actualmente combina sus estudios con el trabajo, demostrando responsabilidad y compromiso en cada ámbito. Su interés por la informática y la innovación tecnológica lo motiva a seguir aprendiendo sobre desarrollo de software y redes. Aspira a crear soluciones tecnológicas que impulsen la eficiencia y el crecimiento de empresas locales, aplicando siempre valores de ética, esfuerzo y superación personal."}
                   />
 
                   <EditorCard
@@ -169,9 +171,9 @@ export default function RevistaUMG() {
                   
                   <EditorCard
                     name="Susan Elizabeth Ixcamparij Ixchop"
-                    imgSrc="/susan.jpeg"
+                    imgSrc="/susan.png"
                     alt="Susan Elizabeth Ixcamparij Ixchop"
-                    bio={"Colaboradora y defensora de valores éticos en la comunidad; participa en proyectos de divulgación y educación cívica."}
+                    bio={"Nacida el 10 de noviembre de 2003 en Santa Elena, Flores, Petén, Susan Ixcamparij estudia Ingeniería en Sistemas en la Universidad Mariano Gálvez de Guatemala y trabaja como asistente en una tienda de plásticos. Su interés por la tecnología nació desde pequeña, y con dedicación ha construido una base técnica sólida. Sueña con desarrollar sistemas informáticos que optimicen la administración en la empresa familiar y futuros negocios, integrando utilidad, ética y propósito en cada proyecto."}
                   />
                 </div>
               </div>
@@ -186,6 +188,7 @@ export default function RevistaUMG() {
                 <PrincipioFe />
 
                 <VotosExitoBook />
+                <VotosAplicacion />
               </div>
               </div>
             </div>
@@ -664,8 +667,8 @@ export default function RevistaUMG() {
               height={60}
               className="mx-auto mb-6 opacity-50"
             />
-            <p className="text-muted-foreground">Universidad Mariano Gálvez - Competencias de Robótica 2025</p>
-            <p className="text-sm text-muted-foreground mt-2">Tercer Lugar con Orgullo 🏆</p>
+            <p className="text-muted-foreground">Universidad Mariano Gálvez - Revista UMG 2025</p>
+            <p className="text-sm text-muted-foreground mt-2">GRUPO NO.1</p>
           </div>
         </footer>
       </div>
