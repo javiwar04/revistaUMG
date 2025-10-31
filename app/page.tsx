@@ -158,7 +158,6 @@ export default function RevistaUMG() {
                     name="Víctor Alejandro Ochoa Jacinto"
                     imgSrc="/Victor8a.png"
                     alt="Víctor Alejandro Ochoa Jacinto"
-                    role="Editor de investigación"
                     bio={"Nacido el 10 de mayo de 2003 en San Benito, Petén, Víctor Ochoa cursa la carrera de Ingeniería en Sistemas en la Universidad Mariano Gálvez de Guatemala. Actualmente combina sus estudios con el trabajo, demostrando responsabilidad y compromiso en cada ámbito. Su interés por la informática y la innovación tecnológica lo motiva a seguir aprendiendo sobre desarrollo de software y redes. Aspira a crear soluciones tecnológicas que impulsen la eficiencia y el crecimiento de empresas locales, aplicando siempre valores de ética, esfuerzo y superación personal."}
                   />
 
